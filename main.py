@@ -8,14 +8,15 @@ app = Flask(__name__)
   
 @app.route("/")
 def route():
-    return "<h1>Welcome to Chatbot</h1>"
+    print(os.environ)
+    return "<h1>Welcome to Chatbot</h1>"+verify_token
 
 # env_variables
 # token to verify that this bot is legit
-verify_token = os.environ.get('VERIFY_TOKEN', None)
+verify_token = os.environ.get('VERIFICATION_TOKEN', '')
 # verify_token = 'trinhchatbot'
 # token to send messages through facebook messenger
-access_token = os.environ.get('ACCESS_TOKEN', None)
+access_token = os.environ.get('PAGE_ACCESS_TOKEN', '')
 
 @app.route('/webhook', methods=['GET'])
 def webhook_verify():
