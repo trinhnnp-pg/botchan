@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 def route():
     print(os.environ)
-    return "<h1>Welcome to Chatbot</h1>"+verify_token
+    return "<h1>Welcome to Chatbot</h1>"
 
 # env_variables
 # token to verify that this bot is legit
@@ -34,7 +34,8 @@ def webhook_action():
             'recipient': {'id': user_id},
             'message': {}
         }
-        response['message']['text'] = handle_message(user_id, user_message)
+        # response['message']['text'] = handle_message(user_id, user_message)
+        response['message']['text'] = 'Test response'+user_message
     return Response(response="EVENT RECEIVED",status=200)
 
 @app.route('/webhook_dev', methods=['POST'])
