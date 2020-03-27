@@ -12,7 +12,8 @@ def route():
 
 # env_variables
 # token to verify that this bot is legit
-verify_token = os.environ.get('VERIFY_TOKEN', None)
+# verify_token = os.environ.get('VERIFY_TOKEN', None)
+verify_token = 'trinhchatbot'
 # token to send messages through facebook messenger
 access_token = os.environ.get('ACCESS_TOKEN', None)
 
