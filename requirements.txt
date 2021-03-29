@@ -12,7 +12,7 @@ packaging==20.3
 pip-review==1.1.0
 post==2019.4.13
 public==2019.4.13
-Pygments==2.6.1
+Pygments==2.7.4
 pyparsing==2.4.6
 query-string==2019.4.13
 request==2019.4.13
